@@ -1,15 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eban Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
     <div class="container">
-        <h1>Welcome to Eban's Portfolio</h1>
+        <!-- header -->
+        <header class="header-controller w-full justify-content-between align-items-center">
+            <img src="assets/img/bg_header_day.jpg" alt="bg-header" class="w-full h-full object-cover"
+                id="bg-day-header" />
+            <img src="assets/img/bg_header_night.jpg" alt="bg-header" class="w-full h-full object-cover"
+                id="bg-night-header" />
+            <div class="flex justify-between items-center px-2 w-full">
+                <a class="text-2xl font-bold" href="#">Eban</a>
+                <nav class="nav">
+                    <ul class="flex gap-6">
+                        <li><a href="#about-me" class="hover:underline">About me</a></li>
+                        <li><a href="#my-project" class="hover:underline">Projects</a></li>
+                        <li><a href="#contact" class="hover:underline">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="container-switch-mode" type="button" onclick="toggleDarkMode(this)">
+
+                </div>
+            </div>
+        </header>
+        <!-- main view -->
+        <div class="hero mt-25 grid grid-cols-3 gap-4">
+            <div class="col-span-3 md:col-span-2 grid grid-cols-2 grid-rows-1 gap-4">
+                <div class="time-box glass col-span-2 md:col-span-1 order-2 md:order-1">
+                    <div class="flex items-center justify-center gap-2 h-20 w-full">
+                        <div
+                            class="box-hour glass p-2 h-full w-full flex text-center items-center justify-center text-center">
+                            <span id="text-time-hour"></span>
+                        </div>
+                        <div class="glass p-1 h-full flex w-52" style="border-radius: 10px;">
+                            <img src="/assets/img/flag_vietnam.jpg" alt="Flag"
+                                class="w-full h-auto object-contain rounded-lg">
+                        </div>
+                    </div>
+                    <div class="date-box">
+                        <span id="text-date"></span>
+                    </div>
+                    <div class="flex gap-2 items-end p-2">
+                        <span id="text-year"></span>
+                        <span id="text-month" class="uppercase" style="font-family: Bungee;"></span>
+                    </div>
+                </div>
+                <div
+                    class="col-span-2 row-span-1 md:col-span-1 order-1 md:order-2 text-center place-content-center flex flex-col text-center p-4">
+                    <img src="assets/img/imgprofile.jpg" alt="Logo" class="mx-auto mb-4 w-52 h-52 rounded-full" />
+                    <h1 class="text-name text-4xl font-bold mb-2">Eban Developer UI</h1>
+                    <p class="text-lg">Full Stack Developer | Mobile | Tech Lover</p>
+                </div>
+                <div class="glass col-span-2 order-3 md:order-3 grid grid-cols-2">
+                    <div class="board">
+                        <div class="cell" data-index="0"></div>
+                        <div class="cell" data-index="1"></div>
+                        <div class="cell" data-index="2"></div>
+                        <div class="cell" data-index="3"></div>
+                        <div class="cell" data-index="4"></div>
+                        <div class="cell" data-index="5"></div>
+                        <div class="cell" data-index="6"></div>
+                        <div class="cell" data-index="7"></div>
+                        <div class="cell" data-index="8"></div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="cat-eyes-follow col-span-3 md:col-span-1 aspect-[2/3]">
+                <div class="first-eye flex items-center" id="firstEye">
+                    <img src="/assets/img/cat/eye-left.png" id="leftEye">
+                </div>
+                <div class="second-eye flex items-center" id="secondEye">
+                    <img src="/assets/img/cat/eye-right.png" id="rightEye">
+                </div>
+            </div>
+        </div>
+        <!-- about me -->
+        <div class="content-about mt-10 p-10 grid grid-cols-1" id="about-me">
+            <h5 class="text-2xl font-bold col-span-5 text-center">About Me</h5>
+            <div class="grid grid-cols-5 gap-4">
+                <div class="md:col-span-3 col-span-5 flex order-2 md:order-1 items-center justify-center">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="w-52 h-52 bg-cyan-500 shadow-lg shadow-cyan-500/50">
+                            1
+                        </div>
+                        <div class="w-52 h-52 bg-cyan-500 shadow-lg shadow-cyan-500/50">
+                            2
+                        </div>
+                        <div class="w-52 h-52 bg-cyan-500 shadow-lg shadow-cyan-500/50">
+                            3
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 col-span-5 flex items-center justify-center bg-red-500 order-1 min-h-50">
+                </div>
+            </div>
+        </div>
+        <!-- my pojects -->
+        <div class="content-projects">
+            <h5 id="my-project">My projects</h5>
+            <!-- items -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 md:col-span-1 h-52 bg-green-500">
+                    content
+                </div>
+                <div class="col-span-2 md:col-span-1 h-52 bg-green-500">
+                    Product
+                </div>
+            </div>
+        </div>
+        <!-- contact -->
+        <div>
+            <h5 id="contact">Contact Me</h5>
+        </div>
+        <!-- footer -->
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+        </footer>
     </div>
-    <script></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/cat_eyes_follow.js"></script>
 </body>
+
 </html>

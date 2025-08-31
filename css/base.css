@@ -1,0 +1,38 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Monoton&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Rubik+Distressed&display=swap');
+
+/* colors */
+:root {
+  /* Màu chính */
+  --color-primary: #1a73e8;
+  --color-primary-dark: #0f5bd8;
+  --color-secondary: #ff9800;
+
+  /* Màu nền & text */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f5;
+  --color-text: #333333;
+  --color-text-light: #777777;
+
+  /* Trạng thái */
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-danger: #f44336;
+}
+
+/* background: var(--color-bg); */
+
+/* styles base */
+#about-me #contact #my-project {
+  scroll-margin-top: 60px;
+}
+
+html {
+  scroll-behavior: smooth; /* để cuộn mượt */
+}
+
+@supports not ((backdrop-filter: blur(1px))) {
+  .glass { background: rgba(255,255,255,0.7); color:#111; }
+}
