@@ -164,7 +164,7 @@ body::before {
 .cat-eyes-follow {
   position: relative;
   border-radius: 20px;
-  background-image: url("/assets/img/cat/cat_body.jpg");
+  background-image: url("./assets/img/cat/cat_body.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
